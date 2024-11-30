@@ -1,0 +1,110 @@
+
+/* General Styles */
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+#barra-lateral {
+    width: 250px;
+    background-color: #292b2c;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#barra-lateral h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#barra-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+#barra-lateral li {
+    margin: 10px 0;
+}
+
+#barra-lateral li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+#barra-lateral li a:hover {
+    color: #fff;
+}
+
+#content {
+    margin-left: 300px;
+    padding: 20px;
+    flex: 1;
+}
+
+#content h3 {
+    color: #292b2c;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#content ul {
+    padding-left: 0px;
+    list-style-type: square;
+}
+
+#content img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 100%;
+}
+#content img[width="600"] {
+    margin: 20px auto; /* Centra las imágenes con ancho 600px */
+}
+
+#content img[width]:not([width="600"]) {
+    margin: 20px 0; /* Alinea a la izquierda imágenes con ancho diferente a 600px */
+    display: inline-block; /* Permite que estén alineadas con el texto */
+    margin: 0 10px 0 0; /* Margen a la derecha del texto */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+}
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #barra-lateral {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    #content {
+        margin-left: 0;
+    }
+}
